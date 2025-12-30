@@ -1,0 +1,135 @@
+:root {
+  --bg: #f5f7fb;
+  --panel: #ffffff;
+  --accent: #2c7be5;
+  --text: #1f2933;
+  --muted: #52606d;
+}
+
+* {
+  box-sizing: border-box;
+}
+.btn{
+  display: inline;
+  background-color: #1f6feb;
+  color: white;
+  padding: 5px ;
+  border-radius: 5px;
+  margin: 5px;
+  margin-top: 10px;
+  text-decoration: none;
+}
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+header,
+main,
+footer {
+  display: block;
+}
+
+.hero {
+  text-align: center;
+  padding: 48px 16px 32px;
+  background: linear-gradient(135deg, #e8f0ff, #fefefe);
+  border-bottom: 1px solid #e0e6ed;
+}
+
+.hero h1 {
+  margin: 0 0 4px;
+  font-size: 2.4rem;
+  color: var(--accent);
+}
+
+.hero h2 {
+  margin: 0 0 8px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.hero h3 {
+  margin: 0 0 12px;
+  color: #374151;
+}
+
+.tagline {
+  margin: 0 auto;
+  max-width: 520px;
+  color: #3b4256;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.panel {
+  background: var(--panel);
+  padding: 20px 18px;
+  border: 1px solid #e5e9f2;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(17, 24, 39, 0.04);
+}
+
+.panel h2 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.skills ul {
+  padding-left: 20px;
+  margin: 12px 0 0;
+}
+
+.skills li {
+  margin: 6px 0;
+}
+
+.project-card {
+  padding: 12px 10px;
+  border: 1px dashed #d7deea;
+  border-radius: 8px;
+  margin: 12px 0;
+}
+
+.project-card h3 {
+  margin: 0 0 6px;
+}
+
+.project-card a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+.contact a {
+  color: #1f6feb;
+}
+
+.profile-shot {
+  display: block;
+  margin-top: 12px;
+  border-radius: 10px;
+  border: 2px solid #e5e9f2;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 16px;
+  background: #eef2f7;
+  border-top: 1px solid #e0e6ed;
+}
+

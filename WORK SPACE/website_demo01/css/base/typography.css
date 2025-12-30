@@ -1,0 +1,10 @@
+/* Typography */
+h1 {
+    font-size: 55px;
+    font-family: 'Lora', serif;
+}
+
+.text-center { 
+    text-align: center; 
+}
+

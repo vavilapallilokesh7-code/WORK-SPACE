@@ -1,0 +1,837 @@
+/* Home Page Sections */
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    background-image: url("../../assets/images/hero/bg1.jpg");
+    background-size: cover;
+    background-position: 80% 90%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.balloon {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none; /* Allows clicks to pass through them */
+}
+
+/* Position and size for the first balloon */
+.balloon-2 {
+    width: 40px;
+    top: 30%;
+    left: 40%;
+    animation: floating 2s ease-in-out infinite;
+}
+
+/* Position and size for the second balloon (slower and offset) */
+.balloon-1 {
+    width: 60px;
+    top: 60%;
+    left: 50%;
+    animation: floating 3s ease-in-out infinite;
+    animation-delay: 1s; /* Starts slightly later for realism */
+}
+
+/* The Floating Animation */
+@keyframes floating {
+    0% {
+        transform: translate(0, 0px);
+    }
+    50% {
+        transform: translate(15px, -25px); /* Moves up and slightly right */
+    }
+    100% {
+        transform: translate(0, 0px);
+    }
+}
+
+.home {
+    margin-left: 100px;
+    margin-top: 100px;
+    text-align: left;
+    max-width: 400px;
+    font-family: 'Lora', serif;
+}
+
+.home-pass {
+    font-size: medium;
+    padding: 10px;
+}
+
+.hero-title {
+    margin-top: 100px;
+    text-align: left;
+    max-width: 300px;
+
+    font-family: 'Lora', serif;
+    font-size: 55px;
+    font-weight: 400; /* Normal */
+    line-height: 59px;
+    color: rgb(40, 40, 40);
+}
+
+
+.hero-badge {
+    margin-bottom: 30px;
+}
+
+.badge-text {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--secondary-color);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 30px;
+}
+
+.hero-description {
+    font-size: 18px;
+    color: var(--text-color);
+    line-height: 1.8;
+    text-align: left;
+}
+.social-icons {
+    display: flex;
+    gap: 20px; /* Space between icons */
+    align-items: center;
+}
+
+.social-link {
+    color: #000; /* Solid Black */
+    font-size: 18px;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.social-link:hover {
+    opacity: 0.6;
+}
+
+/* Hide social icons on mobile if necessary */
+@media (max-width: 768px) {
+    .social-icons {
+        display: none;
+    }
+}
+/* Chapter Section */
+.chapter-section {
+    padding: 10px 0;
+    background: var(--white);
+    position: relative;
+}
+
+.chapter-separator {
+    text-align: center;
+    margin: 20px 0 40px 0; /* Adjust top and bottom spacing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chapter-separator img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Ensure the Chapter Header lines and title align well with the separator */
+.chapter-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px; /* Pulls header closer to the separator */
+}
+
+.chapter-header .line {
+    height: 1px;
+    background-color: #e0e0e0; /* Light gray line */
+    flex-grow: 1;
+    max-width: 100px;
+}
+
+.chapter-icon {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 14px;
+    color: #333;
+}
+
+.chapter-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 30px;
+    color: var(--primary-color);
+    letter-spacing: 3px;
+}
+
+.chapter-content {
+    max-width: 900px;
+    margin: 0 auto 80px;
+}
+
+.chapter-text {
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.chapter-subtitle {
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.chapter-col p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #666;
+}
+
+/* Dropcap Effect */
+/* Container for the specific column */
+.dropcap-col {
+    position: relative; /* Necessary for absolute positioning of the A */
+}
+
+.dropcap-paragraph {
+    position: relative;
+    z-index: 2; /* Ensures text is above the letter */
+    line-height: 1.8;
+    color: #666; /* Adjust to match your text color */
+}
+
+/* The Large Background Letter */
+.dropcap {
+    position: absolute;
+    top: -80px;    /* Adjust based on your font size */
+    left: -35px;   /* Adjust to align horizontally */
+    font-family: 'Playfair Display', serif; /* Or your preferred serif font */
+    font-size: 160px; /* Very large size */
+    font-weight: 700;
+    color: #f2f2f2; /* Very light gray to act as a background */
+    z-index: -1;    /* Places it behind the paragraph text */
+    line-height: 1;
+    pointer-events: none; /* Allows user to highlight text through the letter */
+}
+
+/* Optional: Grid adjustments to ensure enough space */
+.chapter-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    align-items: start;
+}
+
+.chapter-paragraphs {
+    margin-bottom: 40px;
+}
+
+.chapter-paragraphs p {
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.chapter-decoration {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.also-available {
+    position: relative;
+    /* margin-top: 40px; */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.also-available img {
+    max-width: 220px;
+    opacity: 0.9;
+}
+
+.decoration-circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    opacity: 0.3;
+}
+.clients-section {
+    padding-top: 40px;
+    padding-bottom: 90px;
+    background-color: #fff;
+}
+
+.clients-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.client-item {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ensure images have a consistent height/size if needed */
+.client-item img {
+    max-height: 500px; 
+    transition: opacity 0.3s ease;
+}
+
+/* Position the hover image directly on top of the main image */
+.client-item .hover-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Hidden by default */
+}
+
+/* On hover: hide main, show gold version */
+.client-item:hover .main-img {
+    opacity: 0;
+}
+
+.client-item:hover .hover-img {
+    opacity: 1;
+}
+/* Kindle Section */
+.kindle-section {
+    padding: 100px 0 0 0;
+    background-image: url('../../assets/images/hero/bg2.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+.kindle-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.kindle-content {
+    flex: 1;
+    text-align: left;
+    padding-bottom: 100px;
+}
+
+.kindle-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.kindle-description {
+    font-size: 18px;
+    color: #eeeeee;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.amazon-btn-img {
+    width: 160px;
+    transition: transform 0.3s ease;
+}
+
+.amazon-btn-img:hover {
+    transform: scale(1.05);
+}
+
+.kindle-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.kindle-device {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: -20px;
+}
+
+/* Reviews Section */
+.reviews-section {
+    padding: 100px 0;
+    background: #f5f5f5;
+    text-align: center;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Audio Section */
+.audio-player-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 500px;
+}
+
+.audio-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #000; /* Solid Black */
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.audio-btn i {
+    font-weight: 900; /* Ensures FontAwesome icons look bold */
+}
+.audio-btn:hover {
+    color: #000;
+}
+.btn-black {
+    background: #000;
+    color: #fff;
+    padding: 20px 60px;
+    border: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+#progressBar {
+    flex-grow: 1;
+    height: 4px;
+    cursor: pointer;
+}
+
+#volumeControl {
+    width: 80px;
+    cursor: pointer;
+}
+
+.time {
+    font-size: 14px;
+    color: #333;
+}
+
+.audio-section {
+    padding: 120px 0;
+    background: #fff;
+    overflow: hidden;
+}
+
+.audio-flex {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.audio-image-wrapper {
+    flex: 1.2;
+    position: relative;
+}
+
+.audio-devices {
+    max-width: 110%;
+    height: auto;
+    display: block;
+}
+
+.audio-content {
+    flex: 1;
+    text-align: left;
+    margin-left: 40px;
+}
+
+.audio-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #2c2c2c;
+}
+
+.audio-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 450px;
+}
+
+/* Custom Audio Player Look */
+.audio-player-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.custom-progress-bar {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bar {
+    height: 4px;
+    background: #e0e0e0;
+    flex-grow: 1;
+    position: relative;
+}
+
+.time {
+    font-size: 14px;
+    color: #333;
+}
+
+.audio-actions {
+    display: flex;
+    flex-direction: column; /* Stacks image below button */
+    align-items: flex-start;
+    position: relative;
+    margin-top: 20px;
+}
+.free-preview-wrap {
+    position: relative;
+    margin-top: -10px; /* Slight overlap with button */
+    margin-left: 50px;  /* Moves it to the right of the button's start */
+}
+.free-preview-img {
+    max-width: 150px; /* Adjust based on your needs */
+    height: auto;
+}
+.free-preview-text {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 24px;
+    color: #b5b5b5;
+    display: block;
+}
+
+.gold-arrow {
+    position: absolute;
+    top: -30px;
+    left: -40px;
+    width: 60px;
+    transform: rotate(-10px);
+}
+#volumeControl, #progressBar {
+    accent-color: #f1b953; /* Makes the slider thumb gold */
+}
+/* Promo Section */
+.promo {
+    min-height: 100vh;
+    background-image: url('../../assets/images/hero/bg3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+
+.promo-title {
+    font-family: Lora, sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--white);
+}
+
+.promo-subtitle {
+    font-size: 20px;
+    line-height: 1.8;
+    font-weight: 400;
+    max-width: 900px;
+    margin: 0 auto;
+} */
+
+.promo-decoration {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.promo-section .decoration-circle {
+    background: var(--white);
+    opacity: 0.3;
+}
+
+/* Order Section */
+.order-section {
+    padding: 80px 80px;
+}
+
+.order-content {
+    max-width: 520px;
+}
+
+.order-content h1 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.order-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.order-image img {
+    max-width: 420px;
+}
+
+.order-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #2c2c2c;
+}
+
+.divider-icon {
+    font-size: 18px;
+    margin-bottom: 60px;
+    position: relative;
+    color: #2c2c2c;
+}
+
+.divider-icon::before,
+.divider-icon::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 200px;
+    height: 1px;
+    background: #e0e0e0;
+}
+
+.divider-icon::before {
+    right: 55%;
+}
+
+.divider-icon::after {
+    left: 55%;
+}
+
+/* About Section */
+.about-section {
+    background: #f8f8f8;
+    overflow: hidden;
+}
+
+.about-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.about-image-wrapper {
+    flex: 1;
+    position: relative;
+    max-width: 500px;
+}
+
+.author-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.about-content {
+    flex: 1.2;
+    text-align: left;
+}
+
+.about-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 35px;
+    color: #2c2c2c;
+}
+
+.about-text {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+.about-text p {
+    margin-bottom: 25px;
+}
+
+.about-logos {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.about-logos img {
+    max-height: 80px;
+    width: auto;
+    filter: grayscale(100%);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.about-logos img:hover {
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .kindle-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .kindle-content {
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    .kindle-title {
+        font-size: 40px;
+    }
+
+    .kindle-image-wrapper {
+        justify-content: center;
+    }
+
+    .audio-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .audio-content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .audio-title {
+        font-size: 40px;
+    }
+
+    .about-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    .about-logos {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 120px 0 80px;
+    }
+
+    .chapter-title {
+        font-size: 48px;
+    }
+
+    .kindle-title,
+    .audio-title,
+    .order-title,
+    .about-title {
+        font-size: 36px;
+    }
+
+    .promo-title {
+        font-size: 42px;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .order-title {
+        font-size: 42px;
+    }
+
+    .divider-icon::before,
+    .divider-icon::after {
+        width: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero-description,
+    .chapter-text,
+    .about-text {
+        font-size: 14px;
+    }
+
+    .chapter-title {
+        font-size: 36px;
+    }
+
+    .kindle-title,
+    .audio-title,
+    .order-title,
+    .about-title {
+        font-size: 28px;
+    }
+
+    .promo-title {
+        font-size: 32px;
+    }
+
+    .promo-subtitle {
+        font-size: 16px;
+    }
+}
+

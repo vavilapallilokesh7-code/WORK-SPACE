@@ -1,0 +1,68 @@
+/* Button Components */
+.btn {
+    padding: 15px 40px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+}
+
+.btn-primary {
+    background: var(--secondary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-black {
+    background: #000;
+    color: #fff;
+    padding: 15px 50px;
+    border-radius: 0;
+    text-transform: lowercase;
+    font-weight: 700;
+}
+
+.btn-black:hover {
+    background: #d4af37;
+    color: #000;
+}
+
+/* Audio Section Button */
+.audio-actions .btn-black {
+    padding: 18px 50px;
+    text-transform: none;
+}
+
+/* Order Form Button */
+.order-form button {
+    background: #222;
+    color: #fff;
+    border: none;
+    padding: 16px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.order-form button:hover {
+    background: #000;
+}
+
+/* Premium Black Button */
+.form-input + .btn-black {
+    padding: 18px 60px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+

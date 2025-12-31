@@ -1,0 +1,109 @@
+/* Navigation Styles */
+.nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-list,
+.nav-link {
+    font-family: 'Playfair Display', serif;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--gold);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--primary-color);
+    transition: all 0.3s ease;
+}
+.social-icons {
+    display: flex;
+    gap: 20px; /* Space between icons */
+    align-items: center;
+}
+
+.social-link {
+    color: #000; /* Solid Black */
+    font-size: 18px;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.social-link:hover {
+    opacity: 0.6;
+}
+
+/* Hide social icons on mobile if necessary */
+@media (max-width: 768px) {
+    .social-icons {
+        display: none;
+    }
+}
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        padding: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        display: none;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+}
+

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My HTML Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>My HTML Portfolio</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Features</a>
+            <a href="#demo">Demo</a>
+            <a href="#">Contact</a>
+        </nav>
+        <hr>
+    </header>
+    <div class="block">
+        <h2>About HTML</h2>
+        <p>
+            HTML stands for HyperText Markup Language. It is the standard language
+            used to create web pages.
+        </p>
+        <hr>
+    </div>
+    <div class="block flex">
+        <div>
+            <h2>Key Features of HTML</h2>
+            <ul>
+                <li>Easy to learn</li>
+                <li>Semantic structure</li>
+                <li>Multimedia support</li>
+                <li>Forms and tables</li>
+            </ul>
+        </div>
+
+        <div class="image-box">
+            <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2" alt="Laptop">
+            <p><em>Laptop and coffee</em></p>
+        </div>
+    </div>
+
+    <hr>
+    <div class="block flex">
+        <div>
+            <h2>HTML Topics Covered</h2>
+            <ol>
+                <li>Headings & Sections</li>
+                <li>Lists and Tables</li>
+                <li>Forms and Inputs</li>
+                <li>Media Embeds</li>
+            </ol>
+        </div>
+
+        <div>
+            <h3>Project Timeline</h3>
+            <table>
+                <tr>
+                    <th>Phase</th>
+                    <th>Tasks</th>
+                    <th>Duration</th>
+                </tr>
+                <tr>
+                    <td>Planning</td>
+                    <td>Research & Outline</td>
+                    <td>1 Week</td>
+                </tr>
+                <tr>
+                    <td>Development</td>
+                    <td>Coding Content</td>
+                    <td>2 Weeks</td>
+                </tr>
+                <tr>
+                    <td>Review</td>
+                    <td>Testing & Fixes</td>
+                    <td>3 Days</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <hr>
+    <div class="block">
+        <h2>Resources</h2>
+        <ul>
+            <li>
+                <a href="https://developer.mozilla.org/">MDN Web Docs</a>
+                - Comprehensive HTML reference
+            </li>
+            <li>
+                <a href="https://www.w3schools.com/">W3Schools</a>
+                - Learn HTML basics
+            </li>
+        </ul>
+        <hr>
+    </div>
+    <div class="block" id="demo">
+        <h2>Demo Video</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/UB1O30fR-EE" title="HTML Demo Video"
+            allowfullscreen> </iframe>
+        <p><em>Lazy-loaded demo via iframe</em></p>
+        <hr>
+    </div>
+    <div class="block">
+        <h2>Contact Me</h2>
+        <form>
+            <label>Name:</label><br>
+            <input type="text"><br><br>
+
+            <label>Email:</label><br>
+            <input type="email"><br><br>
+
+            <label>Message:</label><br>
+            <textarea rows="4"></textarea><br><br>
+
+            <label>Subscribe to newsletter?</label><br>
+            <input type="radio" name="subscribe"> Yes
+            <input type="radio" name="subscribe"> No
+            <br><br>
+
+            <label>Preferred Contact:</label><br>
+            <input type="checkbox"> Email
+            <input type="checkbox"> Phone
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <hr>
+    <footer>
+        <p>
+            © 2024 My HTML Portfolio |
+            <a href="mailto:contact@example.com">contact@example.com</a> |
+            Location: Anytown, USA
+        </p>
+    </footer>
+
+</body>
+
+</html>

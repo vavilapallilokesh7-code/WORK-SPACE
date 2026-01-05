@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Web Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>Interactive Web Project</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Dynamic</a>
+            <a href="#">Timer</a>
+            <a href="#">Contact Form</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <!-- About Section -->
+        <section class="about">
+            <div class="about-text">
+                <h2>About This Project</h2>
+                <p>
+                    This is a sample interactive web page built using HTML and JavaScript.
+                    It features dynamic content manipulation, form validation, and local storage.
+                </p>
+
+                <h3>Features Demonstrated:</h3>
+                <ul>
+                    <li>DOM manipulation</li>
+                    <li>Form validation</li>
+                    <li>Event handling</li>
+                    <li>Dynamic content updates</li>
+                    <li>Local storage</li>
+                </ul>
+            </div>
+
+            <div class="map-box">
+                <iframe src="https://www.google.com/maps?q=Madhura%20Nagar%20Vijayawada&output=embed" allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+                <button>Toggle Map</button>
+            </div>
+        </section>
+
+        <!-- Middle Section -->
+        <section class="grid">
+            <!-- To Do -->
+            <div class="card">
+                <h3>Interactive To-Do List</h3>
+                <div class="todo-input">
+                    <input type="text" placeholder="New Task...">
+                    <button>Add</button>
+                </div>
+
+                <ul class="todo-list">
+                    <li>Learn HTML <button>Remove</button></li>
+                    <li>Practice JavaScript <button>Remove</button></li>
+                    <li>Store data in localStorage <button>Remove</button></li>
+                </ul>
+
+                <p class="note">Tasks are saved in your browser's local storage.</p>
+                <button class="danger">Clear All Tasks</button>
+                <h2>Auto-Updating Timer</h2>
+                <hr>
+                <p>This counter auto-updates every second:</p>
+                <br>
+                <h2>Time elapsed: 00:00:08</h2>
+                <br>
+                <div class="btn-group">
+                    <button>Pause Timer</button>
+                    <button>Reset Timer</button>
+                </div>
+                <br>
+                <h3>Feat Hessions & Videos</h3>
+                <hr>
+                <div class="map-box">
+                    <iframe src="https://www.google.com/maps?q=Madhura%20Nagar%20Vijayawada&output=embed"
+                        allowfullscreen="" loading="lazy">
+                    </iframe>
+                    <button>Toggle Map</button>
+                </div>
+
+            </div>
+
+            <!-- Timer -->
+            <div class="card">
+                <h2>Auto-Updating Timer</h2>
+                <hr>
+                <p>This counter auto-updates every second:</p>
+                <br>
+                <h2>Time elapsed: 00:00:08</h2>
+                <br>
+                <div class="btn-group">
+                    <button>Pause Timer</button>
+                    <button>Reset Timer</button>
+                </div>
+                <br>
+                <h2>Contact Form</h2>
+                <hr>
+                <label>Name:</label>
+                <input type="text">
+
+                <label>Email:</label>
+                <input type="email">
+                <label>Password:</label>
+                <input type="password">
+
+                <label>Message:</label>
+                <textarea></textarea>
+
+                <div class="checkbox">
+                    Subscribe to newsletter
+                    <HR>
+                    <label><input type="checkbox"> Yes</label>
+                    <label><input type="checkbox"> No</label>
+                </div>
+
+                <div class="radio">
+                    Preferred Contact:
+                    <hr>
+                    <label><input type="radio" name="contact"> Email</label>
+                    <label><input type="radio" name="contact"> Phone</label>
+                </div>
+
+                <button class="danger">Clear Data</button>
+                <p class="success">Your information is saved in this browser!</p>
+            </div>
+
+        </section>
+
+        <!-- Contact Section -->
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Interactive Web Project | Your email:
+            <a href="mailto:user@example.com">user@example.com</a>
+        </p>
+        <a href="#">Privacy Policy</a> |
+        <a href="#">Terms of Service</a>
+    </footer>
+
+</body>
+
+</html>
